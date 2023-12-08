@@ -1,0 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --primary-color: #3e5d73;
+  --secondary-color: #6892a0;
+  --tertiary-color: #9bb6ac;
+  --accent-color: #783a3e;
+  --background-color: #f9faed;
+}
