@@ -1,9 +1,11 @@
 package main
 
 import (
-	"fmt"
+	"github.com/ebonian/where2kee/server/cmd/server"
+	"github.com/ebonian/where2kee/server/pkg/config"
 )
 
 func main() {
-	fmt.Println("Hello, world!")
+	config.LoadAllConfigs(".env")
+	server.Serve()
 }
