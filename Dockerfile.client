@@ -6,6 +6,6 @@ COPY client /usr/src/app/client
 
 EXPOSE 3000
 
-RUN npm install -g http-server
+RUN npm install -g http-server nodemon
 
-CMD ["http-server", "client", "-p", "3000"]
+CMD ["nodemon", "--exec", "http-server", "client", "-p", "3000"]
