@@ -13,6 +13,3 @@ vendor
 .env
 build/
 tmp/
-
-# Build file
-server

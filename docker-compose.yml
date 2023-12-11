@@ -1,5 +1,18 @@
 version: "3"
 services:
+  postgres:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: myuser
+      POSTGRES_PASSWORD: mypassword
+      POSTGRES_DB: where2kee_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - server-network
+
   client:
     build:
       context: .
@@ -8,6 +21,8 @@ services:
       - "3000:3000"
     volumes:
       - ./client:/usr/src/app/client
+    networks:
+      - server-network
 
   server:
     build:
@@ -15,3 +30,13 @@ services:
       dockerfile: Dockerfile.server
     ports:
       - "4000:4000"
+    networks:
+      - server-network
+    depends_on:
+      - postgres
+
+volumes:
+  postgres_data:
+
+networks:
+  server-network:
