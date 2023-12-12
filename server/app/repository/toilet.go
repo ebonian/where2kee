@@ -16,23 +16,23 @@ func (r *ToiletRepository) FindAll() ([]model.Toilet, error) {
 
 	var toilets []model.Toilet
 
-	if err := db.Find(&toilets).Error; err != nil {
+	if err := db.Preload("Reviews").Find(&toilets).Error; err != nil {
 		return nil, err
 	}
 
 	return toilets, nil
 }
 
-func (r *ToiletRepository) FindByID(id string) (model.Toilet, error) {
+func (r *ToiletRepository) FindByBuildingID(buildingID string) ([]model.Toilet, error) {
 	db := database.GetDB()
 
-	var toilet model.Toilet
+	var toilets []model.Toilet
 
-	if err := db.First(&toilet, id).Error; err != nil {
-		return model.Toilet{}, err
+	if err := db.Preload("Reviews").Where("building_id = ?", buildingID).Find(&toilets).Error; err != nil {
+		return nil, err
 	}
 
-	return toilet, nil
+	return toilets, nil
 }
 
 func (r *ToiletRepository) Create(toilet model.Toilet) (model.Toilet, error) {

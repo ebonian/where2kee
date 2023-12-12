@@ -7,7 +7,7 @@ import (
 
 func BuildingRoute(app *fiber.App) {
 	building := app.Group("/building")
+
 	building.Get("/", controller.GetBuilding)
 	building.Get("/:id", controller.GetBuildingByID)
-	building.Post("/", controller.CreateBuilding)
 }

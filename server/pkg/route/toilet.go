@@ -7,6 +7,7 @@ import (
 
 func ToiletRoute(app *fiber.App) {
 	toilet := app.Group("/toilet")
+
 	toilet.Get("/", controller.GetToilet)
-	toilet.Get("/:id", controller.GetToiletByID)
+	toilet.Get("/:buildingID", controller.GetToiletByBuildingID)
 }

@@ -18,15 +18,17 @@ func GetToilet(c *fiber.Ctx) error {
 	return c.JSON(toilets)
 }
 
-func GetToiletByID(c *fiber.Ctx) error {
+func GetToiletByBuildingID(c *fiber.Ctx) error {
 	toiletRepo := repository.NewToiletRepository()
 
-	toilet, err := toiletRepo.FindByID(c.Params("id"))
+	buildingID := c.Params("buildingID")
+
+	toilets, err := toiletRepo.FindByBuildingID(buildingID)
 	if err != nil {
-		return c.Status(fiber.StatusNotFound).SendString(err.Error())
+		return c.Status(fiber.StatusInternalServerError).SendString(err.Error())
 	}
 
-	return c.JSON(toilet)
+	return c.JSON(toilets)
 }
 
 func CreateToilet(c *fiber.Ctx) error {
