@@ -10,6 +10,5 @@ vendor
 *.out
 
 # Misc
-.env
 build/
 tmp/
