@@ -45,6 +45,7 @@ form {
   border-radius: 0 0 50% 50%;
   clip-path: ellipse(50% 100% at 50% 0%);
   transform: rotate(180deg);
+  margin-bottom: -5px
 }
 
 .rectangle {
