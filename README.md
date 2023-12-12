@@ -13,6 +13,8 @@ docker compose build
 docker compose up
 ```
 
+The website and the API server will exposed on [localhost:3000](http://localhost:3000) and [localhost:4000](http://localhost:4000) respectively.
+
 ### Teams
 
 - Atthawit Jamsai 6538223721
