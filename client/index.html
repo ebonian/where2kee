@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Where2Kee</title>
-    <link rel="icon" type="image/x-icon" href="/client/picture/favicon.svg"></line>
+    <link rel="icon" type="image/x-icon" href="/client/picture/favicon.svg" />
 
     <!-- css -->
     <link rel="stylesheet" href="css/style.css" />
@@ -22,38 +22,84 @@
     <script src="js/main.js"></script>
   </head>
   <body>
-    <p>Where2Kee</p>
-    <div class="heading">
-      <p>Find Your Perfect Throne!</p>
-      <div class="semi-circle"></div>
-    </div>
-    <div class="rectangle"></div>
-    <div class="container">
-      <form>
-        <button class="building" id="1">ตึก 1</button>
-        <button class="building" id="2">ตึก 2</button>
-        <button class="building" id="3">ตึก 3</button>
-        <button class="building" id="4">ตึก 4</button>
-        <button class="building" id="100">ตึก 100 ปี</button>
-      </form>
-    <div class="article-container">
-      <article class="article-card">
-        <div class="card">
-          <div class="card-content">
-            <p class="card-title">ห้องน้า ชั้น 3</p>
-            <p class="card-description">ตึก 100 ปี | 3 FL</p>
-            <div class="card-img">
-              <img src="/client/picture/Screenshot (6).png" alt="card-pic" />
+    <!-- hero section -->
+    <section class="hero-section">
+      <div class="header-container">
+        <div class="header-bar">
+          <a
+            href="https://github.com/ebonian/where2kee"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="/client/assets/github-logo.svg"
+              alt="github"
+              width="42px"
+              height="42px"
+            />
+          </a>
+        </div>
+        <div class="header-title">
+          <h1>Where2Kee</h1>
+          <p>Find Your Perfect Throne!</p>
+        </div>
+      </div>
+      <div class="image-container">
+        <div class="image-wrapper">
+          <img
+            src="/client/assets/pile-of-poo-image.svg"
+            alt="hero-image"
+            width="100%"
+            height="100%"
+          />
+        </div>
+        <div class="image-background"></div>
+      </div>
+    </section>
+
+    <!-- app section -->
+    <section class="app-section">
+      <div class="app-wrapper">
+        <form class="building-container">
+          <button id="1">ตึก 1</button>
+          <button id="2">ตึก 2</button>
+          <button id="3">ตึก 3</button>
+          <button id="4">ตึก 4</button>
+          <button id="100">ตึก 100 ปี</button>
+        </form>
+        <div class="toilet-container">
+          <!-- data mapping here -->
+          <div class="toilet-wrapper">
+            <div class="toilet-card">
+              <div class="toilet-card-header">
+                <h3 class="toilet-card-title">ห้องน้ำชาย ชั้น 3</h3>
+                <div class="toilet-card-score">
+                  <p>3.2</p>
+                  <img
+                    src="/client/assets/pile-of-poo-flatten.svg"
+                    alt="score-icon"
+                    width="32px"
+                  />
+                </div>
+              </div>
+              <p class="toilet-card-description">ตึก 100 ปี | 3 FL</p>
+              <div class="toilet-card-image">
+                <img
+                  src="/client/assets/Screenshot (6).png"
+                  alt="toilet-image"
+                />
+              </div>
+            </div>
+            <div class="toilet-review-container">
+              <div class="toilet-review-card"></div>
+              <div class="toilet-review-card"></div>
+              <div class="toilet-review-card"></div>
+              <div class="toilet-review-card"></div>
             </div>
           </div>
         </div>
-      </article>
-      <div class="reviews">
-        
       </div>
-    </div>
-    </div>
-    <section></section>
+    </section>
     <footer></footer>
   </body>
 </html>
