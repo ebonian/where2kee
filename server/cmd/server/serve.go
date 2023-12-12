@@ -29,6 +29,8 @@ func Serve() {
 
 	database.InitializeDB()
 
+	CreateData()
+
 	sigCh := make(chan os.Signal, 1)
 	signal.Notify(sigCh, syscall.SIGTERM, syscall.SIGINT, syscall.SIGQUIT)
 

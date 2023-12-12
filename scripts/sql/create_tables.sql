@@ -20,8 +20,6 @@ CREATE TABLE reviews (
 CREATE TABLE toilets (
     toilet_id SERIAL PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
-    score INTEGER NOT NULL,
-    location VARCHAR(255) NOT NULL,
     image VARCHAR(255), -- Assuming a string for the image path
     building_id INT,
     reviews_id INT[],

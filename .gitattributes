@@ -1,1 +1,2 @@
 go.sum merge=union
+*.go linguist-vendored

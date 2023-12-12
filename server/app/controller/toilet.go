@@ -40,8 +40,6 @@ func CreateToilet(c *fiber.Ctx) error {
 
 	toilet := model.Toilet{
 		Name:       toiletInput.Name,
-		Score:      toiletInput.Score,
-		Location:   toiletInput.Location,
 		Image:      toiletInput.Image,
 		BuildingID: uuid.MustParse(toiletInput.BuildingID),
 	}
