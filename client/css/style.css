@@ -143,6 +143,18 @@ footer {
   align-items: start;
 }
 
+.toilet-review-score {
+  display: flex;
+  align-items: start;
+}
+
+.toilet-review-score p {
+  font-size: 1.1rem;
+  font-weight: 650;
+  color: var(--accent-color);
+  margin-right: 0.5rem;
+}
+
 .toilet-card-score p {
   font-size: 1.2rem;
   font-weight: 700;
@@ -153,6 +165,13 @@ footer {
 .toilet-card-description {
   font-weight: 600;
   color: var(--secondary-color);
+}
+
+.toilet-review-detail {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-right: 0.5rem;
 }
 
 .toilet-card-image {
@@ -184,4 +203,10 @@ footer {
   min-height: 148px;
   width: 100%;
   margin-bottom: 1.5rem;
+}
+
+.toilet-review-header {
+  padding: 1.5rem;
+  display: flex;
+  justify-content: center;
 }
