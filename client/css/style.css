@@ -118,10 +118,10 @@ footer {
   margin-top: 2rem;
 }
 
-.toilet-card {
+.toilet-card-container {
   background-color: var(--background-color);
   height: 100%;
-  width: 61%;
+  width: 60%;
   border-radius: 1.5rem;
   padding: 1.5rem;
 }
@@ -162,6 +162,10 @@ footer {
   margin-right: 0.5rem;
 }
 
+.toilet-card-score img {
+  user-select: none;
+}
+
 .toilet-card-description {
   font-weight: 600;
   color: var(--secondary-color);
@@ -191,22 +195,42 @@ footer {
   display: flex;
   flex-direction: column;
   height: 100%;
-  width: 36%;
+  width: 37.5%;
   border-radius: 1.5rem;
   overflow-y: scroll;
 }
 
 .toilet-review-card {
   background-color: var(--background-color);
-  padding: 1rem;
+  padding: 1.5rem;
   border-radius: 1.5rem;
   min-height: 148px;
   width: 100%;
   margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.toilet-review-header {
-  padding: 1.5rem;
+.toilet-review-content {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+}
+
+.toilet-review-comment {
+  font-weight: 600;
+  margin-right: 0.5rem;
+  color: var(--primary-color);
+}
+
+.toilet-review-user {
+  display: flex;
+  align-items: center;
+}
+
+.toilet-review-user p {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--tertiary-color);
+  margin-left: 0.5rem;
 }
