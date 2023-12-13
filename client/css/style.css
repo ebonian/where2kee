@@ -105,6 +105,11 @@ footer {
   margin: 0 -1rem;
 }
 
+.building-button-selected {
+  background-color: var(--secondary-color);
+  color: var(--background-color);
+}
+
 .toilet-container {
   display: flex;
   flex-direction: column;

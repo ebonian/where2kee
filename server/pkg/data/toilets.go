@@ -93,6 +93,18 @@ var toilets = []model.Toilet{
 	},
 	{
 		ID:         uuid.New(),
+		Name:       "ห้องน้ำชายชั้น 1 ฝั่ง TrueLab",
+		Image:      "",
+		BuildingID: BuildingId["ตึก 3"],
+	},
+	{
+		ID:         uuid.New(),
+		Name:       "ห้องน้ำหญิงชั้น 1 ฝั่ง TrueLab",
+		Image:      "",
+		BuildingID: BuildingId["ตึก 3"],
+	},
+	{
+		ID:         uuid.New(),
 		Name:       "ห้องน้ำชายชั้น 2",
 		Image:      "",
 		BuildingID: BuildingId["ตึก 3"],
