@@ -30,8 +30,12 @@ const addBuildingButtonEvent = () => {
   buttons.forEach((button) => {
     button.addEventListener("click", () => {
       const buildingName = button.textContent;
-
       setSelectedBuilding(buildingName);
+      const toiletContainer = document.querySelector(".toilet-container");
+      toiletContainer.innerHTML = "";
+      selectedToilet.forEach((toilet) => {
+        toiletContainer.innerHTML += toiletHTMLTemplate(toilet);
+      });
     });
   });
 };
