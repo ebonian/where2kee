@@ -19,7 +19,7 @@ const toiletHTMLTemplate = (toilet) => {
         <div class="toilet-card-score">
           <p>${review.score}</p>
           <img
-            src="/client/assets/pile-of-poo-flatten.svg"
+            src="/assets/pile-of-poo-flatten.svg"
             alt="score-icon"
             width="26px"
             height="28px"
@@ -28,7 +28,7 @@ const toiletHTMLTemplate = (toilet) => {
       </div>
       <div class="toilet-review-user">
         <img
-          src="/client/assets/user-icon.svg"
+          src="/assets/user-icon.svg"
           alt="user-icon"
           width="22px"
           height="22px"
@@ -48,7 +48,7 @@ const toiletHTMLTemplate = (toilet) => {
           <div class="toilet-card-score">
             <p>${toiletScore}</p>
             <img
-              src="/client/assets/pile-of-poo-flatten.svg"
+              src="/assets/pile-of-poo-flatten.svg"
               alt="score-icon"
               width="32px"
             />
