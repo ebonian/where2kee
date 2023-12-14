@@ -28,9 +28,9 @@ const addBuildingButtonEvent = () => {
   );
 
   buttons.forEach((button) => {
-    button.addEventListener("click", () => {
+    button.addEventListener("click", async () => {
       const buildingName = button.textContent;
-      setSelectedBuilding(buildingName);
+      await setSelectedBuilding(buildingName);
       mapDataToCard();
     });
   });
@@ -55,7 +55,7 @@ const setBuildingButton = async (buildings) => {
   addBuildingButtonEvent();
 };
 
-const setSelectedBuilding = (buildingName) => {
+const setSelectedBuilding = async (buildingName) => {
   const buttons = Array.from(
     document.querySelector(".building-container").children
   );
@@ -70,12 +70,13 @@ const setSelectedBuilding = (buildingName) => {
     }
   });
 
-  fetchToiletByBuilding(buildingName);
+  await fetchToiletByBuilding(buildingName);
 };
 
 const mapDataToCard = () => {
   const toiletContainer = document.querySelector(".toilet-container");
   toiletContainer.innerHTML = "";
+  console.log(selectedToilet);
   selectedToilet.forEach((toilet) => {
     toiletContainer.innerHTML += toiletHTMLTemplate(toilet);
   });
