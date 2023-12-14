@@ -76,7 +76,6 @@ const setSelectedBuilding = async (buildingName) => {
 const mapDataToCard = () => {
   const toiletContainer = document.querySelector(".toilet-container");
   toiletContainer.innerHTML = "";
-  console.log(selectedToilet);
   selectedToilet.forEach((toilet) => {
     toiletContainer.innerHTML += toiletHTMLTemplate(toilet);
   });
