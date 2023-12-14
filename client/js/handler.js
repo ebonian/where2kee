@@ -31,11 +31,7 @@ const addBuildingButtonEvent = () => {
     button.addEventListener("click", () => {
       const buildingName = button.textContent;
       setSelectedBuilding(buildingName);
-      const toiletContainer = document.querySelector(".toilet-container");
-      toiletContainer.innerHTML = "";
-      selectedToilet.forEach((toilet) => {
-        toiletContainer.innerHTML += toiletHTMLTemplate(toilet);
-      });
+      mapDataToCard();
     });
   });
 };
@@ -76,3 +72,11 @@ const setSelectedBuilding = (buildingName) => {
 
   fetchToiletByBuilding(buildingName);
 };
+
+const mapDataToCard = () => {
+  const toiletContainer = document.querySelector(".toilet-container");
+  toiletContainer.innerHTML = "";
+  selectedToilet.forEach((toilet) => {
+    toiletContainer.innerHTML += toiletHTMLTemplate(toilet);
+  });
+}
