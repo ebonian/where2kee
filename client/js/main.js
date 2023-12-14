@@ -8,7 +8,9 @@ const fetchData = async () => {
   }
 
   setBuildingButton(buildings);
-  fetchToiletByBuilding(selectedBuilding);
+  await fetchToiletByBuilding(selectedBuilding);
+  mapDataToCard();
+
 };
 
 fetchData();
