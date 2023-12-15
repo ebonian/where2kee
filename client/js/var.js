@@ -5,7 +5,13 @@ let selectedToilet = null;
 
 const toiletHTMLTemplate = (toilet) => {
   let toiletBuilding = `${selectedBuilding} | ${toilet.name.split(" ")[1]}FL`;
+  let toiletImage = `<img src="${toilet.image}" alt="toilet-image" />`;
   let toiletScore;
+
+  if (toilet.image === "") {
+    toiletImage = `<p class="no-image-available">No image available<p/>`;
+  }
+
   if (toilet.reviews.length === 0) {
     toiletScore = "No reviews yet";
   } else {
@@ -15,6 +21,7 @@ const toiletHTMLTemplate = (toilet) => {
       toilet.reviews.length
     ).toFixed(1);
   }
+
   const reviewHTMLTemplate = (review) => `
     <div class="toilet-review-card">
       <div class="toilet-review-content">
@@ -59,7 +66,7 @@ const toiletHTMLTemplate = (toilet) => {
         </div>
         <p class="toilet-card-description">${toiletBuilding}</p>
         <div class="toilet-card-image">
-          <img src="${toilet.image}" alt="toilet-image" />
+          ${toiletImage}
         </div>
       </div>
       <div class="toilet-review-container">
