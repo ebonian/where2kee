@@ -11,3 +11,10 @@ type Review struct {
 	Score    uint      `json:"score"`
 	ToiletID uuid.UUID `gorm:"type:uuid" json:"-"`
 }
+
+type CreateReviewInput struct {
+	Username string `json:"username"`
+	Comment  string `json:"comment"`
+	Score    uint   `json:"score"`
+	ToiletID string `json:"toiletId"`
+}
