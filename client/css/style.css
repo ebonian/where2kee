@@ -11,21 +11,24 @@ body {
   background: var(--background-color);
 }
 
-button {
-  background-color: var(--background-color);
-  color: var(--secondary-color);
-  border: 10px solid transparent;
-  border-radius: 3rem;
-  font-weight: 700;
-  font-size: 1.2rem;
-  width: 100%;
-  cursor: pointer;
-  margin: 0 1rem;
-}
-
 footer {
   background-color: var(--secondary-color);
   height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+footer h4 {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+footer p {
+  font-size: 0.6rem;
+  font-weight: 500;
 }
 
 .header-container {
@@ -103,6 +106,18 @@ footer {
   display: flex;
   justify-content: space-between;
   margin: 0 -1rem;
+}
+
+.building-button {
+  background-color: var(--background-color);
+  color: var(--secondary-color);
+  border: 10px solid transparent;
+  border-radius: 3rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+  width: 100%;
+  cursor: pointer;
+  margin: 0 1rem;
 }
 
 .building-button-selected {
@@ -209,12 +224,16 @@ footer {
   background-color: var(--background-color);
   padding: 1.5rem;
   border-radius: 1.5rem;
-  min-height: 148px;
+  min-height: 130px;
   width: 100%;
   margin-bottom: 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.toilet-review-card:last-child {
+  margin-bottom: 0;
 }
 
 .toilet-review-content {
@@ -224,7 +243,7 @@ footer {
 
 .toilet-review-comment {
   font-weight: 600;
-  margin-right: 0.5rem;
+  margin-right: 1rem;
   color: var(--primary-color);
 }
 
@@ -238,4 +257,49 @@ footer {
   font-weight: 700;
   color: var(--tertiary-color);
   margin-left: 0.5rem;
+}
+
+@media screen and (max-width: 900px) {
+  .header-title h1 {
+    font-size: 3rem;
+  }
+
+  .header-title p {
+    font-size: 1rem;
+  }
+
+  .building-container {
+    margin: 0 -0.5rem;
+  }
+
+  .building-button {
+    margin: 0 0.5rem;
+  }
+
+  .toilet-wrapper {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .toilet-card-container {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .toilet-review-container {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .building-container {
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0 1rem;
+  }
+
+  .building-button {
+    margin: 0.5rem 0.5rem;
+    width: 120px;
+  }
 }
