@@ -25,6 +25,7 @@ func Serve() {
 	route.GeneralRoute(app)
 	route.BuildingRoute(app)
 	route.ToiletRoute(app)
+	route.ReviewRoute(app)
 	route.NotFoundRoute(app)
 
 	database.InitializeDB()
