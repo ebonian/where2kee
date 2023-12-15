@@ -119,7 +119,7 @@ footer {
 .toilet-wrapper {
   display: flex;
   justify-content: space-between;
-  height: 400px;
+  height: 438px;
   margin-top: 2rem;
 }
 
@@ -185,8 +185,8 @@ footer {
 
 .toilet-card-image {
   width: 100%;
-  height: 270px;
-  margin-top: 12px;
+  height: 300px;
+  margin-top: 18px;
 }
 
 .toilet-card-image img {
