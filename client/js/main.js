@@ -6,11 +6,12 @@ const fetchData = async () => {
     selectedBuilding = buildings[0].name;
     localStorage.setItem("selectedBuilding", selectedBuilding);
   }
+  setLoadingScreen(false);
 
-  setBuildingButton(buildings);
+  await setBuildingButton(buildings);
   await fetchToiletByBuilding(selectedBuilding);
-  mapDataToCard();
 
+  mapDataToCard();
 };
 
 fetchData();

@@ -1,1 +1,3 @@
-window.addEventListener("load", () => {});
+window.addEventListener("load", () => {
+  setLoadingScreen(true);
+});

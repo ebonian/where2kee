@@ -10,7 +10,10 @@ const toiletHTMLTemplate = (toilet) => {
     toiletScore = "No reviews yet";
   } else {
     // .reduce(callback function, initial value) its iterate throught the array and return a single value
-    toiletScore = (toilet.reviews.reduce((acc, cur) => acc + cur.score, 0) / toilet.reviews.length).toFixed(1);
+    toiletScore = (
+      toilet.reviews.reduce((acc, cur) => acc + cur.score, 0) /
+      toilet.reviews.length
+    ).toFixed(1);
   }
   const reviewHTMLTemplate = (review) => `
     <div class="toilet-review-card">

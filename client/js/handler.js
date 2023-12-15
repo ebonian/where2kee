@@ -79,4 +79,25 @@ const mapDataToCard = () => {
   selectedToilet.forEach((toilet) => {
     toiletContainer.innerHTML += toiletHTMLTemplate(toilet);
   });
-}
+};
+
+const setLoadingScreen = (isLoading) => {
+  const appWrapper = document.querySelector(".app-wrapper");
+
+  console.log(isLoading);
+
+  if (isLoading) {
+    appWrapper.innerHTML = `
+    <div class="loading-screen">
+      <img src="/assets/loader.svg" alt="loading" width="320px" />
+      <h4>Loading...</h4>
+      <p>Make sure to run the API server first!</p>
+    </div>
+  `;
+  } else {
+    appWrapper.innerHTML = `
+      <div class="building-container"></div>
+      <div class="toilet-container"></div>
+    `;
+  }
+};
