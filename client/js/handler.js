@@ -84,8 +84,6 @@ const mapDataToCard = () => {
 const setLoadingScreen = (isLoading) => {
   const appWrapper = document.querySelector(".app-wrapper");
 
-  console.log(isLoading);
-
   if (isLoading) {
     appWrapper.innerHTML = `
     <div class="loading-screen">
