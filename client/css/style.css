@@ -323,3 +323,13 @@ footer p {
     width: 120px;
   }
 }
+
+.no-image-available {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--accent-color);
+  padding-top: 20%;
+}
